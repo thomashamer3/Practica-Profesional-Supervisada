@@ -1,3 +1,4 @@
+
 # Apps Realizadas para la Materia Practica Profesional Supervisada, con Ionic y Angular.
 <img width="867" height="808" alt="c8db0c63a5d0aecdb6ee89959f3d3f5b" src="https://github.com/user-attachments/assets/50d4681b-a83a-40e3-81ec-f02e09d01e6d" />
 <img width="1336" height="571" alt="c89fb7378634fceacb68dcc60df47bfd" src="https://github.com/user-attachments/assets/90ca981a-3072-4f5b-bf7a-02198a81ba82" />
@@ -15,3 +16,6 @@ https://github.com/user-attachments/assets/fd8d0f3f-2172-4f53-a0b7-e5c8cb8cbf08
 
 
 https://github.com/user-attachments/assets/4142d34f-7949-41e9-9fd3-b31678c6bbef
+
+<img width="363" height="643" alt="cf47b2b448888ead11b0884a767647f5" src="https://github.com/user-attachments/assets/d8b8b367-9e9e-4a9a-9f38-2a6c77751415" />
+<img width="363" height="644" alt="84abf3a21accf877888ee36058f4c163" src="https://github.com/user-attachments/assets/385568f0-a596-48ab-896b-706767ccfc5e" />
