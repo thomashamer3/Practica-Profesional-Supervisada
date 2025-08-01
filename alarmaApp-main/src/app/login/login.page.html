@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Ingreso Alarma de robo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center ion-margin-top">
+    <img src="assets/icon/AppAlarma.png" class="ion-margin" width="50%" height="50%"/>
+  </ion-row>
+  
+  <ion-row class="ion-justify-content-center ion-padding">
+    <ion-title>Por favor ingrese sus datos</ion-title>
+  </ion-row>
+
+  <form [formGroup]="formRegistro">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+          
+        
+        <ion-col size="7" class="ion-text-center ion-align-items-center">
+          
+          <ion-item>
+            <ion-input label="Correo" label-placement="floating" placeholder="Correo" type="email" formControlName="email"></ion-input>
+          </ion-item>
+
+          <ion-text *ngIf="formRegistro.controls['email'].errors?.['required'] && formRegistro.controls['email'].touched" color="danger">Debe ingresar un correo</ion-text>
+
+          <ion-item class="ion-margin-top">
+            <ion-input label="Contraseña" label-placement="floating" placeholder="Contraseña" type="password" formControlName="pass"></ion-input>
+          </ion-item>
+
+          <ion-text *ngIf="formRegistro.controls['pass'].errors?.['required'] && formRegistro.controls['pass'].touched" color="danger">Debe ingresar una contraseña</ion-text>
+
+          <ion-text *ngIf="formRegistro.controls['pass'].errors?.['minlength']" color="danger">Debe tener 6 caracteres mínimo</ion-text>
+
+        </ion-col>
+
+        <ion-col size="5" class="ion-text-center">
+          <ion-button shape="round" expand="full" color="medium" class="ion-button--round"(click)="logueoRapido('admin@admin.com','111111')">Admin</ion-button>
+          <ion-button shape="round" expand="full" color="dark" class="ion-button--round"(click)="logueoRapido('invitado@invitado.com','222222')">Invitado</ion-button>
+          <ion-button shape="round" expand="full" color="tertiary" class="ion-button--round"(click)="logueoRapido('usuario@usuario.com','333333')">Usuario</ion-button>
+          <ion-button shape="round" expand="full" color="warning" class="ion-button--round"(click)="logueoRapido('anonimo@anonimo.com','444444')">Anónimo</ion-button>
+          <ion-button shape="round" expand="full" color="danger" class="ion-button--round"(click)="logueoRapido('tester@tester.com','555555')">Tester</ion-button>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button shape="round" color="success" [disabled]="formRegistro.invalid" expand="block" (click)="login()">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
+</ion-content>

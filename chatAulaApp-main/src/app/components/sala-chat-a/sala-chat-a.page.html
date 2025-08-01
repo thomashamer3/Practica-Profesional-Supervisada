@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>Sala PPS-4A</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="outline" shape="round" routerLink="/home">
+        Volver
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="containerChat">
+    
+    <div class="spinner" *ngIf="cargando">
+      <ion-spinner name="circular" color="warning" style="width: 70px;height: 70px;"></ion-spinner>
+    </div>
+    
+    <div class="card-body" *ngIf="!cargando">
+      <div class="msjDelChat h-100" id="contenedorMsj">          
+          <ion-subtitle *ngFor="let msj of arrayMensajes" class="msjChat p-2" [ngClass]="(this.usuarioLogueado.uid == msj.emisor) ? 'propio' : 'otro'">
+            <p style="margin: 0px;" *ngIf="this.usuarioLogueado.uid != msj.emisor">{{ msj.nombre }} {{msj.fecha | date :'dd/MM/YYYY HH:mm'}}</p>
+            <p style="margin: 0px;" *ngIf="this.usuarioLogueado.uid == msj.emisor">{{msj.fecha | date :'dd/MM/YYYY HH:mm'}}</p>
+            {{ msj.texto }}
+          </ion-subtitle>
+      </div>
+    </div>
+    <form class="input-msj card-footer text-muted input-group" (ngSubmit)="enviarMensaje()" *ngIf="!cargando">
+      <input type="text" class="form-control" placeholder="Envíe el Mensaje" [(ngModel)]="mensajeNuevo" [ngModelOptions]="{standalone: true}">
+      <div class="input-group-append" (click)="enviarMensaje()">
+          <span class="input-group-text" id="basic-addon2">
+              <img class="imgEnviar" src="/assets/images/send.png" alt="send"> 
+          </span>
+      </div>        
+    </form>
+    
+  </div>
+
+</ion-content>

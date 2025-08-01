@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center" color="light">
+      Relevamiento visual
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main-container background-image">
+    <div class="contenedor">
+      <ion-card class="card" (click)="navegar('/cosas-lindas')">        
+        <ion-card-header >
+          <ion-card-title>Cosas Lindas</ion-card-title>          
+        </ion-card-header>
+        <img alt="cosas-lindas" src="/assets/images/cosas-lindas.png"/>
+      </ion-card>
+
+      <ion-card class="card" (click)="navegar('/cosas-feas')">        
+        <ion-card-header>
+          <ion-card-title>Cosas Feas</ion-card-title>          
+        </ion-card-header>
+        <img alt="cosas-feas" src="/assets/images/cosas-feas.png" />
+      </ion-card>
+    </div>   
+  </div>
+  <app-navegacion [tabActual]="'home'"></app-navegacion>
+</ion-content>

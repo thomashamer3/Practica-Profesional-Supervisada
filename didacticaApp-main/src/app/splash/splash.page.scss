@@ -1,0 +1,51 @@
+ion-content {
+  --background: rgb(88, 88, 88);
+}
+
+.division {
+  -webkit-animation:rotate-vert-left 1s cubic-bezier(.645,.045,.355,1.000) 2s infinite both;animation:rotate-vert-left 1s cubic-bezier(.645,.045,.355,1.000) 2s infinite both
+}
+.nombre {
+  -webkit-animation:swing-bottom-fwd .4s cubic-bezier(.25,.46,.45,.94) both;animation:swing-bottom-fwd .4s cubic-bezier(.25,.46,.45,.94) both
+}
+.container {
+  img {
+    height: 200px;
+    margin-top: 60%;
+    -webkit-animation: flip-scale-down-diag-2 0.5s linear both;
+    animation: flip-scale-down-diag-2 0.5s linear both;
+  }
+}
+
+@-webkit-keyframes flip-scale-down-diag-2 {
+  0% {
+    -webkit-transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+  50% {
+    -webkit-transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+    transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate3d(-1, 1, 0, -180deg);
+    transform: scale(1) rotate3d(-1, 1, 0, -180deg);
+  }
+}
+
+@keyframes flip-scale-down-diag-2 {
+  0% {
+    -webkit-transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+  50% {
+    -webkit-transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+    transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate3d(-1, 1, 0, -180deg);
+    transform: scale(1) rotate3d(-1, 1, 0, -180deg);
+  }   
+}
+
+@-webkit-keyframes rotate-vert-left{0%{-webkit-transform:rotateY(0);transform:rotateY(0);-webkit-transform-origin:left;transform-origin:left}100%{-webkit-transform:rotateY(360deg);transform:rotateY(360deg);-webkit-transform-origin:left;transform-origin:left}}@keyframes rotate-vert-left{0%{-webkit-transform:rotateY(0);transform:rotateY(0);-webkit-transform-origin:left;transform-origin:left}100%{-webkit-transform:rotateY(360deg);transform:rotateY(360deg);-webkit-transform-origin:left;transform-origin:left}}
+@-webkit-keyframes swing-bottom-fwd{0%{-webkit-transform:rotateX(0);transform:rotateX(0);-webkit-transform-origin:bottom;transform-origin:bottom}100%{-webkit-transform:rotateX(-180deg);transform:rotateX(-180deg);-webkit-transform-origin:bottom;transform-origin:bottom}}@keyframes swing-bottom-fwd{0%{-webkit-transform:rotateX(0);transform:rotateX(0);-webkit-transform-origin:bottom;transform-origin:bottom}100%{-webkit-transform:rotateX(-180deg);transform:rotateX(-180deg);-webkit-transform-origin:bottom;transform-origin:bottom}}

@@ -1,0 +1,42 @@
+ion-content,ion-header,ion-toolbar{
+    --background: rgb(15, 11, 247);
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ion-button[shape=circle] {
+    --border-radius: 50%;
+    width: 125px;
+    height: 125px;    
+    margin: 10px;
+}
+
+.btn-circular{
+    border-radius: 50%;
+    border: 6px solid black;
+}
+
+.titulo-login{
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+}
+
+.rotating-image {
+    animation: rotate 4.5s infinite linear;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }

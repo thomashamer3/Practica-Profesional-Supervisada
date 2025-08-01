@@ -1,0 +1,17 @@
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/fondo-app.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+ion-button[shape=circle] {
+    --border-radius: 50%;
+    width: 100px;
+    height: 100px;    
+}

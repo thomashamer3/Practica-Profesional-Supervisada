@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Conversando en el Aula
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="warning">
+  <div class="container">
+    
+    <div class="contenedor-botones">      
+      <div class="boton-numero" routerLink="/chat-4a">
+          <ion-title class="ion-text-center" style="font-size:xx-large">PPS-4A</ion-title>
+      </div>
+
+      <div class="boton-numero" style="background-color: #be2121 !important;" routerLink="/chat-4b">
+        <ion-title class="ion-text-center" style="font-size:xx-large">PPS-4B</ion-title>
+      </div>
+    </div>
+    <ion-button class="ion-margin-top" color="danger" shape="round" (click)="this.auth.logout()">
+      Cerrar sesión
+      <ion-icon class="ion-margin-start" name="exit-outline"></ion-icon>
+    </ion-button>
+
+  </div>
+</ion-content>

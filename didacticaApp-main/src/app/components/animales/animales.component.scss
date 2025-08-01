@@ -1,0 +1,34 @@
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor-botones{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+    padding: 5px;
+}
+
+.boton-numero{
+    border: 8px solid black;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b97d7d;
+}
+
+img{
+    height: 100px;
+}
+
+.grid-final{
+    grid-column: 1 / 3;
+    height: 70%;
+}

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="warning">
+    <ion-title>Tabla Didáctica</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-image">
+
+    <div class="ion-text-center ion-margin-top">
+      <ion-button shape="circle" color="warning" (click)="logueoRapido('invitado@invitado.com','222222')">
+        <img src="assets/images/boy.png"/>
+      </ion-button>
+
+      <ion-button shape="circle" color="warning" (click)="logueoRapido('tester@tester.com','555555')">
+        <img src="assets/images/boy2.png"/>
+      </ion-button>
+    </div>
+
+    <div class="ion-text-center ion-margin-top">
+      <ion-button shape="circle" color="warning" (click)="logueoRapido('usuario@usuario.com','333333')">
+        <img src="assets/images/girl.png"/>
+      </ion-button>
+      <ion-button shape="circle" color="warning" (click)="logueoRapido('anonimo@anonimo.com','444444')">
+        <img src="assets/images/girl2.png"/>
+      </ion-button>
+    </div>
+
+    <div class="ion-text-center ion-margin-top">
+      <ion-button shape="circle" color="light" (click)="logueoRapido('admin@admin.com','111111')">
+        <img src="assets/images/admin.png"/>
+      </ion-button>
+    </div>      
+    
+    <form [formGroup] = "formRegistro">
+      <ion-item class="ion-margin-top">
+        <ion-input type="email" placeholder="Correo" formControlName="email"></ion-input>
+      </ion-item>
+      
+      <ion-text *ngIf="formRegistro.controls['email'].errors?.['required'] && formRegistro.controls['email'].touched" color="warning">Debe ingresar un correo</ion-text>
+  
+      <ion-item>
+        <ion-input type="password" placeholder="Contraseña" formControlName="pass"></ion-input>
+      </ion-item>
+      
+      <ion-text *ngIf="formRegistro.controls['pass'].errors?.['required'] && formRegistro.controls['pass'].touched" color="warning">Debe ingresar una contraseña</ion-text>
+      <ion-text *ngIf="formRegistro.controls['pass'].errors?.['minlength']" color="warning">Debe tener 6 caracteres mínimo</ion-text>
+
+      <div class="ion-text-center ion-margin-top">
+        <ion-button [disabled]="formRegistro.invalid" expand="block" color="dark" (click)="login()">Ingresar</ion-button>
+      </div>
+    </form>
+
+  </div>
+
+</ion-content>

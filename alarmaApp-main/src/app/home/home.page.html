@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ion-title *ngIf="!activado" class="title-container"
+      >Presione para activar</ion-title
+    >
+    <img
+      *ngIf="!activado"
+      src="assets/images/on.png"
+      alt="boton-activar"
+      (click)="onoff()"
+    />
+
+    <ion-title *ngIf="activado" class="title-container"
+      >Presione para desactivar</ion-title
+    >
+    <img
+      *ngIf="activado"
+      src="assets/images/off.png"
+      alt="boton-activar"
+      (click)="onoff()"
+    />
+  </div>
+
+  <ion-fab horizontal="center" vertical="bottom" class="boton-logout">
+    <ion-fab-button color="dark" title="Cerrar sesión" (click)="cerrarSesion()">
+      <ion-icon name="log-out-outline" color="warning"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

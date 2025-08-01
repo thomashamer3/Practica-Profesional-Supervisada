@@ -1,0 +1,44 @@
+ion-content{
+    --background: rgb(107, 104, 104);
+}
+h1 {
+    color: rgb(255, 255, 255);
+  }
+  
+
+h1.ion-text-center,
+ion-title {
+  color: rgb(255, 255, 255);
+}
+
+.ingreso-rapido{
+    border: 3px solid #f3e5e5;
+    border-radius: 8px;
+}
+
+.container-perfiles{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
+
+.boton-imagen{
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 15px;
+    height: 14vh;
+    background-color: rgb(101, 89, 89);
+    border-radius: 15px;
+    width: 12vh;    
+}
+
+.nombre-perfil{    
+    width: 100%;    
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;    
+    margin: 0;
+    border-radius: 10px;
+    text-align: center !important;
+  }

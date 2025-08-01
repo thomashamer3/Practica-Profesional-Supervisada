@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Conversando en el Aula
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content split-pane="true">
+  <!-- contenido de la parte izquierda -->
+  <ion-grid>
+    <form [formGroup]="formRegistro">
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input label="Correo electrónico" labelPlacement="stacked" placeholder="Correo" type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-text *ngIf="formRegistro.controls['email'].errors?.['required'] && formRegistro.controls['email'].touched" color="danger">Debe ingresar un email</ion-text>
+          
+          <ion-item>
+            <ion-input label="Contraseña" labelPlacement="stacked" placeholder="Contraseña" type="password" formControlName="pass"></ion-input>
+          </ion-item>
+          
+            <ion-text *ngIf="formRegistro.controls['pass'].errors?.['required'] && formRegistro.controls['pass'].touched" color="danger">Debe ingresar una contraseña</ion-text>
+        <ion-text *ngIf="formRegistro.controls['pass'].errors?.['minlength']" color="danger">Debe tener 6 caracteres mínimo</ion-text>
+
+          <ion-button [disabled]="formRegistro.invalid" expand="block" color="success" (click)="login()">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+
+  <ion-grid class="ion-text-center">
+    <ion-badge color="success" class="ion-text-lg-center">Elija un Perfil</ion-badge>
+  </ion-grid>
+  
+  <swiper-container class="border-carousel"
+    [modules]="swiperModules"
+    [slidesPerView]="3.1"
+    [initialSlide]="1"
+    [centeredSlides]="true"
+    [pagination]="{clickable:true}"
+    >
+    <swiper-slide>
+
+      <button class="boton-imagen" (click)="logueoRapido('admin@admin.com','111111')">
+        <img src="/assets/images/students.png" alt="img-medico" width="50%" height="50%" >
+        <p class="nombre-perfil">Admin</p>
+      </button>
+    </swiper-slide>
+
+    <swiper-slide>
+      <button class="boton-imagen" (click)="logueoRapido('invitado@invitado.com','222222')">
+        <img src="/assets/images/students.png" alt="img-medico" width="50%" height="50%" >
+        <p class="nombre-perfil">Invitado</p>
+      </button>
+    </swiper-slide>
+
+    <swiper-slide>
+      <button class="boton-imagen" (click)="logueoRapido('usuario@usuario.com','333333')">
+        <img src="/assets/images/students.png" alt="img-medico" width="50%" height="50%" >
+        <p class="nombre-perfil">Usuario</p>
+      </button>
+    </swiper-slide>
+
+    <swiper-slide>
+      <button class="boton-imagen" (click)="logueoRapido('anonimo@anonimo.com','444444')">
+        <img src="/assets/images/students.png" alt="img-medico" width="50%" height="50%" >
+        <p class="nombre-perfil">Anónimo</p>
+      </button>
+    </swiper-slide>
+
+    <swiper-slide>
+      <button class="boton-imagen" (click)="logueoRapido('tester@tester.com','555555')">
+        <img src="/assets/images/students.png" alt="img-medico" width="50%" height="50%" >
+        <p class="nombre-perfil">Tester</p>
+      </button>
+    </swiper-slide>
+
+  </swiper-container>
+
+  <ion-row class="ion-justify-content-center ion-padding">
+    <img src="assets/images/people-talking.png" class="ion-margin" width="50%" height="50%"/>
+  </ion-row>
+
+</ion-content>

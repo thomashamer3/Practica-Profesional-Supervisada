@@ -1,0 +1,88 @@
+ion-content,ion-header,ion-toolbar{
+  --background: rgb(107, 104, 104);
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.card{
+  background-color: rgb(56 49 58);
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+}
+
+ion-card{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  flex-direction: column;  
+}
+ion-title {
+  color: rgb(255, 255, 255);
+}
+
+ion-card-title{
+  color: rgb(255, 255, 255);
+}
+
+ion-card-subtitle{
+  color: rgb(255, 255, 255);
+}
+
+ion-card-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.background-image {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.main-container{  
+  padding: 20px;
+}
+
+.contenedor{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.contenedorLikes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  ion-label{
+    font-size: 20px;
+  }
+}

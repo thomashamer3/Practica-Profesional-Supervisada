@@ -1,0 +1,20 @@
+ion-content {
+        --background: rgb(88, 88, 88);
+      }
+    
+      .division {
+        -webkit-animation:focus-in-contract .7s cubic-bezier(.25,.46,.45,.94) both;animation:focus-in-contract .7s cubic-bezier(.25,.46,.45,.94) both
+      }
+      .nombre {
+        -webkit-animation:tracking-out-expand-fwd-bottom .8s cubic-bezier(.55,.085,.68,.53) both;animation:tracking-out-expand-fwd-bottom .8s cubic-bezier(.55,.085,.68,.53) both
+      }
+      .container {
+        img {
+          height: 200px;
+          margin-top: 60%;
+          -webkit-animation:swing-out-right-fwd 1.5s cubic-bezier(.6,-.28,.735,.045) both;animation:swing-out-right-fwd 1.5s cubic-bezier(.6,-.28,.735,.045) both
+        }
+      }
+      @-webkit-keyframes swing-out-right-fwd{0%{-webkit-transform:rotateY(0);transform:rotateY(0);-webkit-transform-origin:right;transform-origin:right;opacity:1}100%{-webkit-transform:rotateY(70deg);transform:rotateY(70deg);-webkit-transform-origin:right;transform-origin:right;opacity:0}}@keyframes swing-out-right-fwd{0%{-webkit-transform:rotateY(0);transform:rotateY(0);-webkit-transform-origin:right;transform-origin:right;opacity:1}100%{-webkit-transform:rotateY(70deg);transform:rotateY(70deg);-webkit-transform-origin:right;transform-origin:right;opacity:0}}  @-webkit-keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}@keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
+      @-webkit-keyframes tracking-out-expand-fwd-bottom{0%{-webkit-transform:translateZ(0) translateY(0);transform:translateZ(0) translateY(0);opacity:1}60%{opacity:.8}100%{letter-spacing:1em;-webkit-transform:translateZ(300px) translateY(200px);transform:translateZ(300px) translateY(200px);opacity:0}}@keyframes tracking-out-expand-fwd-bottom{0%{-webkit-transform:translateZ(0) translateY(0);transform:translateZ(0) translateY(0);opacity:1}60%{opacity:.8}100%{letter-spacing:1em;-webkit-transform:translateZ(300px) translateY(200px);transform:translateZ(300px) translateY(200px);opacity:0}}
+      @-webkit-keyframes focus-in-contract{0%{letter-spacing:1em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes focus-in-contract{0%{letter-spacing:1em;-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}

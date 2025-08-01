@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Mis fotos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main-container background-image">
+    <div class="contenedor">
+      
+      <div class="spinner" *ngIf="cargando">
+        <ion-spinner name="circles" color="light" style="width: 70px;height: 70px;"></ion-spinner>
+      </div>
+
+      <ion-card class="card" *ngFor="let item of misFotos; let i = index" data-index="i">
+        <ion-card-header>
+          <ion-card-title class="ion-text-center">Subida el: {{item.fecha}} {{item.hora}}</ion-card-title>
+          <ion-card-subtitle>Tipo: {{item.tipo}}</ion-card-subtitle>
+        </ion-card-header>
+        
+        <div class="ion-text-center">
+          <img alt="{{item.nombre}}" src="{{item.path}}" width="70%" height="70%"/>
+        </div>      
+        
+      </ion-card>
+    </div>
+  </div>
+  
+  <div class="footer">    
+    <app-navegacion [tabActual]="'mis-fotos'"></app-navegacion>
+  </div>
+
+</ion-content>

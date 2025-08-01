@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Gráficos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="contenedor-principal">
+    
+    <ion-card class="contenedorChart">
+      <ion-card-header>
+        Cosas Feas
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="contenedorChart">
+      <ion-card-header>
+        Cosas Lindas
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #torCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+      </ion-card-content>
+    </ion-card>
+    
+    
+  </div>
+  
+  <div class="footer">
+    <app-navegacion [tabActual]="'graficos'"></app-navegacion>
+  </div>
+
+</ion-content>
